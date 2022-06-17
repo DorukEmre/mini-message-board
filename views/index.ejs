@@ -3,6 +3,11 @@
 </head>
 <body>
     <h1>Mini message board</h1>
-    
-</body>
-</html>
+    <p><a href="/new">Create new message</a></p>
+    <% for( let i = 0; i < messages.length; i++ ) { %>
+        <h3><%= messages[i].user %> </h3>
+        <p><%= messages[i].text %> </p>
+        <p><%= messages[i].added %> </p>
+    <% } %>
+
+<%- include('partials/footer.ejs') %>
